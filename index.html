@@ -1,0 +1,82 @@
+<!doctype html>
+<html data-theme="light">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input[type='number'] {
+            -moz-appearance: textfield;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input {
+            margin: 15px auto;
+            border-radius: 4px;
+            padding: 4px 6px;
+        }
+       input:focus{
+        outline: none;
+       }
+    </style>
+</head>
+
+<body>
+    <header class="my-10">
+        <h1 class="text-5xl font-semibold text-teal-500 text-center">Money Master</h1>
+    </header>
+    <main>
+        <section>
+            <div class="md:flex gap-4 m-10 text-center ">
+                <div>
+                    <img class="w-[95%] h-[100vh]" src="images/banner.jpg" alt="">
+                </div>
+                <div class="bg-slate-100 text-lg p-4">
+                    <h1 class="text-center font-semibold">Income</h1>
+                    <br>
+                    <label for="Income">Income:
+                        <input id="income" class="bg-slate-200" type="number">
+                    </label>
+                    <h1 class="text-center font-semibold">Expenses</h1>
+                    <label for="food">Food:
+                        <input id="food-exp" class="bg-slate-200" type="number">
+                    </label>
+                    <br>
+                    <label for="rent">Rent:
+                        <input id="rent-exp" class="bg-slate-200" type="number">
+                    </label>
+                    <br>
+                    <label for="cloths">Cloths:
+                        <input id="cloths-exp" class="bg-slate-200" type="number">
+                    </label>
+                    <button id="calculate-btn" class="btn btn-info text-white px-4 py-2">Calculate</button>
+                    <h1 class="text-center font-semibold my-3">Total Expenses:<span id="total-exp"> 00</span> </h1>
+                    <h1 class="text-center font-semibold">Balance: <span id="balance"> 00</span> </h1>
+                    <div class="flex">
+                        <label for="cloths">Save:
+                            <input id="save-balance" class="bg-slate-200 w-[25%]" type="number" placeholder="20"><span class="mx-3">%</span><span> <button id="save"
+                                    class="btn btn-info text-white mx-2">Save</button></span>
+                        </label>
+
+                    </div>
+                    <h1 class="text-center font-semibold my-3">Saving Amount:<span id="saving-amount"> 00</span> </h1>
+                    <h1 class="text-center font-semibold">Remaining Balance:<span id="remaining-balance"> 00</span> </h1>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/calculate.js"></script>
+    <script src="js/save.js"></script>
+</body>
+
+</html>
